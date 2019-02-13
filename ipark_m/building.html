@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>ipark</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="all">
+<meta name="author" content="아이파크">
+<meta name="title" content="아이파크">
+<meta name="Description" content="아이파크">
+<meta name="Keywords" content="아이파크">
+<meta property="og:type" content="website">
+<meta property="og:title" content="아이파크">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/slick.css">
+<link rel="stylesheet" href="css/animsition.min.css">
+<link rel="stylesheet" href="css/ipark.css">
+<script type="text/javascript" src="js/libs/jquery/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="js/libs/greensock/TweenMax.min.js"></script>
+<script type="text/javascript" src="js/libs/animsition.js"></script>
+<script type="text/javascript" src="js/libs/jquery/slick.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</head>
+
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <header>
+        <h1><a href="/ipark_m/html_list" class="logo"><span>ipark</span></a></h1>
+        <h2></h2>
+        <div class="mega">
+            <button type="button" class="menu"><span>메뉴</span></button>
+        </div>
+        <!-- gnb -->
+        <nav class="gnb">
+            <div class="gnb_in">
+                <div class="gnb_top">
+                    <ul>
+                    <li><a href="/ipark_m/search" class="ico_sch"><span>검색</span></a></li>
+                    <!-- 로그인 전 -->
+                    <li><a href="/ipark_m/mypage/myinfo" class="ico_my"><span>로그인</span></a></li>
+                    <!-- 로그인 후 -->
+                    <li><button type="button" class="logout">김지선님</button></li>
+                    </ul>
+                </div>
+                <ul class="nav depth1">
+                <li><a href="javascript:;">브랜드</a>
+                    <ul class="depth2">
+                    <li><a href="/ipark_m/brand/brand">브랜드 소개</a></li>
+                    <li><a href="/ipark_m/brand/pr/list">PR</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">단지정보</a>
+                    <ul class="depth2">
+                    <li><a href="/ipark_m/building/list" data-link="/ipark_m/building/">단지정보</a></li>
+                    <li style="display: none;"><a href="/ipark_m/building/interest_customer">관심단지등록</a></li>
+                    <li style="display: none;"><a href="/ipark_m/building/online">온라인 접수</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">IPARK STORY</a>
+                    <ul class="depth2">
+                    <li><a href="/ipark_m/ipark_story/list" data-link="/ipark_m/ipark_story/">IPARK STORY</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">고객문의</a>
+                    <ul class="depth2">
+                    <li><a href="/ipark_m/customer/faq/list">자주묻는 질문</a></li>
+                    <li><a href="/ipark_m/customer/contact/sales/list" data-link="/ipark_m/customer/contact/">연락처안내</a></li>
+                    <li><a href="/ipark_m/customer/qna/write" data-link="/ipark_m/customer/qna/">1:1 문의</a></li>
+                    <li><a href="/ipark_m/customer/as">A/S 안내</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">MY IPARK</a>
+                    <ul class="depth2">
+                    <li><a href="/ipark_m/mypage/my_ipark/commend" data-link="/ipark_m/mypage/my_ipark/">MY IPARK</a></li>
+                    <!-- <li><a href="/ipark_m/mypage/payment_details">중도금 안내</a></li>
+                    <li><a href="/ipark_m/mypage/">오픈하우스 예약</a></li>
+                    <li><a href="/ipark_m/mypage/">입주 예약</a></li> -->
+                    <li><a href="/ipark_m/mypage/qna/list" data-link="/ipark_m/mypage/qna">상담내역</a></li>
+                    </ul>
+                </li>
+                <li style="display: none;"><a href="javascript:;">기타</a>
+                    <ul class="depth2">
+                    <li><a href="/ipark_m/search" data-title="검색결과"></a></li>
+                    <li><a href="/ipark_m/mypage/delete_confirm" data-title="회원탈퇴"></a></li>
+                    <li><a href="/ipark_m/mypage/edit" data-title="회원정보수정"></a></li>
+                    <li><a href="/ipark_m/member/" data-title="회원가입"></a></li>
+                    <li><a href="/ipark_m/login/index" data-title="로그인"></a></li>
+                    <li><a href="/ipark_m/login/certify" data-title="기존회원 인증안내"></a></li>
+                    <li><a href="/ipark_m/login/search_id" data-title="아이디 찾기"></a></li>
+                    <li><a href="/ipark_m/login/search_password" data-title="비밀번호 찾기"></a></li>
+                    <li><a href="/util/clause" data-title="회원약관"></a></li>
+                    <li><a href="/util/privacy" data-title="개인정보처리방침"></a></li>
+                    <li><a href="/util/email_reject" data-title="이메일무단수집거부"></a></li>
+                    </ul>
+                </li>
+                </ul>
+                <button type="button" class="btn_x"><span>메뉴닫기</span></button>
+            </div>
+        </nav>
+        <!-- //gnb -->
+    </header>
+
+    <section id="container">
+        <div class="complex_detail">
+            <div class="tit">
+                <!-- option: exp, sales, const, movein, complete -->
+                <span class="flag complete">분양<br>완료</span>
+                <h3>사가정 센트럴 IPARK</h3>
+            </div>
+
+            <!-- slick -->
+            <div class="visual_slider mt40">
+                <div><img src="img/thumb/thum_img.jpg" alt=""></div>
+                <div><img src="img/thumb/thum_img5.jpg" alt=""></div>
+                <div></div>
+            </div>
+
+            <ul class="col util">
+            <li><a href="#" class="util_home">홈페이지</a></li>
+            <li><a href="#" class="util_openhouse">오픈하우스예약</a></li>
+            <li><a href="#" class="util_rsv">입주예약</a></li>
+            <li><a href="#" class="util_catalog">카달로그</a></li>
+            <li><a href="#" class="util_option">옵션</a></li>
+            <li><a href="#" class="util_pdf">입주자안내문</a></li>
+            </ul>
+
+            <table class="tb_lh">
+            <caption>단지 상세정보</caption>
+            <colgroup><col style="width:26%"><col><col style="width:26%"><col></colgroup>
+            <tbody>
+            <tr>
+                <th>시행사</th>
+                <td colspan="3">시행사명</td>
+            </tr>
+            <tr>
+                <th>설계사</th>
+                <td colspan="3">설계사명</td>
+            </tr>
+            <tr>
+                <th>주소</th>
+                <td colspan="3">서울특별시 영등포구 당산동 가 4-13</td>
+            </tr>
+            <tr>
+                <th>규모</th>
+                <td colspan="3">지하 2층, 지상 14~29층, **개동</td>
+            </tr>
+            <tr>
+                <th>전용면적(㎡)</th>
+                <td colspan="3">59, 84A, 84B, 108</td>
+            </tr>
+            <tr>
+                <th>총가구</th>
+                <td colspan="3">1818</td>
+            </tr>
+            <tr>
+                <th>일반분양</th>
+                <td>187</td>
+                <th>연면적(㎡)</th>
+                <td>1657887</td>
+            </tr>
+            <tr>
+                <th>문의</th>
+                <td>1800-1111</td>
+                <th>대지면적(㎡)</th>
+                <td>19,977</td>
+            </tr>
+            <tr>
+                <th>잔금납부 안내</th>
+                <td>1855-7777</td>
+                <th>분양시기</th>
+                <td>2018.07</td>
+            </tr>
+            <tr>
+                <th>입주안내</th>
+                <td>1877-4858</td>
+                <th>입주시기</th>
+                <td>2020.10</td>
+            </tr>
+            </tbody>
+            </table>
+
+            <div class="bg_pattern">
+                <!-- 공사중 추가 -->
+                <h4>공정현황</h4>
+                <div class="process">
+                    <div class="graph">
+                        <svg width="250" height="250" viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#f03223" />
+                                    <stop offset="50%" stop-color="#bcaa94" />
+                                </linearGradient>
+                            </defs>
+                            <circle class="inner" cx="125" cy="125" r="115" stroke="#fff" />
+                            <circle class="outer" cx="125" cy="125" r="117" stroke="url(#gradient)" transform="rotate(-90, 125, 125)" />
+                        </svg>
+                        <p class="graph_info">전체공정률<em><strong>100</strong>%</em></p>
+                    </div>
+                    <p class="process_date">완공예정일<em>2020.04.03</em></p>
+                </div>
+                <!-- slick -->
+                <div class="visual_slider visual_txt mt40">
+                    <div><img src="img/thumb/thum_img2.jpg" alt=""><p class="txt">2018년 4월</p></div>
+                    <div><img src="img/thumb/thum_img3.jpg" alt=""><p class="txt">2018년 7월</p></div>
+                    <div><p class="txt">2018년 9월</p></div>
+                </div>
+                <!-- //공사중 -->
+
+                <h4>인테리어</h4>
+                <!-- slick -->
+                <div class="visual_slider visual_txt">
+                    <div><img src="img/thumb/thum_img3.jpg" alt=""><p class="txt ico_local">84㎡ 거실</p></div>
+                    <div><p class="txt ico_local">84㎡ 주방</p></div>
+                    <div><img src="img/thumb/thum_img6.jpg" alt=""><p class="txt ico_local">84㎡ 다용도실</p></div>
+                </div>
+
+                <h4>위치</h4>
+                <div class="location"><img src="img/thumb/thum_map2.jpg" alt="위치정보"></div>
+
+                <h4>동호배치도</h4>
+                <div class="arrange"><img src="img/thumb/thum_map.jpg" alt="동호배치도"></div>
+
+                <!-- 공사중 추가 -->
+                <h4>단지갤러리</h4>
+                <!-- slick -->
+                <div class="visual_slider visual_txt">
+                    <div><img src="img/thumb/thum_img4.jpg" alt=""><p class="txt ico_local">당산 센트럴 아이파크 중앙광장</p></div>
+                    <div><p class="txt ico_local">당산 센트럴 아이파크 커뮤니티</p></div>
+                    <div><img src="img/thumb/thum_img6.jpg" alt=""><p class="txt ico_local">당산 센트럴 아이파크 어딜까요?</p></div>
+                </div>
+                <!-- //공사중 -->
+
+                <div class="btn_wrap only_half">
+                    <a href="#" class="btn btn_brown">목록보기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //container -->
+
+    <script>
+        $(function() {
+            $('.visual_slider').slick({
+                arrows: false,
+                dots: true
+            });
+
+            // 전체 공정률
+            dk.GraphCircle($('.process .graph'));
+        });
+    </script>
+
+
+    <footer>
+        <div class="footer_inr">
+            <div class="terms">
+                <ul>
+                <li><a href="/ipark_m/util/clause">회원약관</a></li>
+                <li><a href="/ipark_m/util/privacy"><em>개인정보처리방침</em></a></li>
+                <li><a href="/ipark_m/util/email_reject">이메일무단수집거부</a></li>
+                </ul>
+                <p class="copyright">© HDC HYUNDAI DEVELOPMENT COMPANY. ALL RIGHTS RESERVED.</p>
+            </div>
+            <div class="linkgroup">
+                <select class="sel_family" onchange="{window.open(value,'_blank'); $(this).val('패밀리사이트');}">
+                    <option selected>패밀리사이트</option>
+                    <option value="https://hdc-dvp.com/">HDC 현대산업개발</option>
+                    <option value="http://www.hdc-iservice.com/">HDC 아이서비스(주)</option>
+                    <option value="http://www.hdc-incons.com/">HDC 아이앤콘스(주)</option>
+                    <option value="http://www.hdc-icontrols.com/">HDC 아이콘트롤스(주)</option>
+                    <option value="http://www.hdc-youngchang.com/">HDC 영창(주)</option>
+                    <option value="http://www.hdc-hyundaiep.com/">HDC 현대EP(주)</option>
+                    <option value="https://www.hdc-iparkmall.com/main/main">HDC 아이파크몰(주)</option>
+                    <option value="http://www.hdc-hotel.com/">호텔HDC(주)</option>
+                    <option value="http://www.hdc-sports.com/">HDC스포츠(주)</option>
+                    <option value="http://www.hdcasset.com/">HDC자산운용(주)</option>
+                    <option value="https://www.i-parkcondo.co.kr/index">아이파크 콘도미니움</option>
+                </select>
+                <ul class="sns">
+                <li><a href="http://blog.naver.com/iparkstory" target="_blank" class="blog"><span>블로그</span></a></li>
+                <li><a href="http://www.youtube.com/iparkstory" target="_blank" class="yt"><span>유튜브</span></a></li>
+                <li><a href="https://www.facebook.com/hdcdvp" target="_blank" class="fb"><span>페이스북</span></a></li>
+                <li><a href="https://www.instagram.com/hdcdvp/" target="_blank" class="insta"><span>인스타그램</span></a></li>
+                </ul>
+                <a class="btn_top" href="javascript:dk.goTop();">TOP</a>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- //wrap -->
+</body>
+</html>

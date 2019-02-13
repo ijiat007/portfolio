@@ -1,0 +1,69 @@
+@mixin clear {
+    &:after {
+        display: block;
+        clear: both;
+        content: '';
+    }
+}
+
+@mixin transform($value) {
+    transform: rotate($value);
+}
+
+@mixin ellipse($max-width) {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: $max-width;
+    white-space: nowrap;
+}
+@mixin ellipse-multi($max-width, $line) {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: $max-width;
+    white-space: normal;
+    word-wrap: break-word; 
+    display: -webkit-box; 
+    -webkit-line-clamp: $line; 
+    -webkit-box-orient: vertical;
+}
+
+@mixin bd-radius($radius) {
+    border-radius: $radius;
+}
+
+@mixin circle($size) {
+    width: $size;
+    height: $size;
+    border-radius: 100%;
+}
+
+@mixin hlh($height) {
+    height: $height;
+    line-height: $height;
+}
+
+// @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+//     position: $position;
+//     top: $top;
+//     right: $right;
+//     bottom: $bottom;
+//     left: $left;
+//   }
+
+@mixin bgimg($w: auto, $h: auto, $bp-l: 0, $bp-t: 0) {
+    overflow: hidden;
+    display: inline-block;
+    width: $w;
+    height: $h;
+    background-position: $bp-l $bp-t;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    line-height: 99em;
+    vertical-align: top;
+}
+
+@function rem($fontSize, $baseSize:$baseFont) {
+    @return $fontSize / $baseSize + rem;
+}

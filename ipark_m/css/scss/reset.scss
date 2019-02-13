@@ -1,0 +1,64 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; background: transparent; }
+
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary { display: block; }
+nav ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none;}
+a { margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+table { width: 100%; border-collapse: collapse; border-spacing: 0; table-layout: fixed; }
+table th { font-weight: normal }
+ol, ul { list-style:none; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #cccccc; margin: 1em 0; padding: 0;}
+caption, legend { overflow: hidden; visibility: hidden; text-indent: -9999em; font-size: 0; line-height: 0;}
+em { font-style: normal; }
+img { width: 100%; height: auto; vertical-align: top; }
+html { -webkit-text-size-adjust: 100%; }
+
+a {
+    &:link,
+    &:hover,
+    &:visited,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+h1, h2, h3, h4, h5, strong { font-weight: normal; }
+
+/* form */
+textarea{overflow:auto;resize:none;}
+button,input,optgroup,select,textarea{margin:0;padding:0;border:0;font:inherit;background:transparent;vertical-align:top;border-radius:0;appearance:none;}
+button,select{text-transform:none;border:0;}
+button{overflow:visible;font-weight:normal;}
+button::-moz-focus-inner{padding:0;border:0;}
+select,
+input[type="search"],
+input[type="checkbox"],
+input[type="radio"]{-webkit-appearance:none;box-sizing:border-box;}
+
+/* mobile : form */
+button::-moz-focus-inner,
+input::-moz-focus-inner{padding:0;border:0}
+button, 
+input[type='button'],
+input[type='reset'],
+input[type='submit']{-webkit-appearance:button;cursor:pointer}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button{-webkit-appearance:none;height:auto;margin:0}
+input[type='search']{box-sizing:content-box;-webkit-appearance:textfield}
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration{-webkit-appearance:none}

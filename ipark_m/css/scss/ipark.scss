@@ -1,0 +1,38 @@
+@import 'variables';
+@import 'mixin';
+
+@import 'reset';
+
+// webfont style import
+@import url("webfont/notokr/notosans.css");
+@import url("webfont/nanumsquareround/nanumsquareround.min.css");
+
+body, html {
+    height: 100%;
+    font-size: $baseFont * ($screen-lg / $px-values);
+}
+body {
+    min-width: 320px;
+    margin: 0 auto;
+    font-family: Noto Sans, sans-serif;
+    line-height: 1.25;
+}
+
+// 375
+@media (max-width: $screen-ml) {
+    body, html { font-size: $baseFont * ($screen-ml / $px-values); }
+}
+
+// 360
+@media (max-width: $screen-md) {
+    body, html { font-size: $baseFont * ($screen-md / $px-values); }
+}
+
+// 320
+@media (max-width: $screen-sm) {
+    body, html { font-size: $baseFont * ($screen-sm / $px-values); }
+}
+
+@import 'common';
+@import 'style';
+

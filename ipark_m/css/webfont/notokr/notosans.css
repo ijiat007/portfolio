@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Noto Sans Thin';
+    font-style: normal;
+    font-weight: 100;    
+    src: url(NotoSans-Thin.eot);
+    src: url(NotoSans-Thin.eot?#iefix) format('embedded-opentype'),
+    url(NotoSans-Thin.woff) format('woff'),
+    url(NotoSans-Thin.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Light';
+    font-style: normal;
+    font-weight: 300;    
+    src: url(NotoSans-Light.eot);
+    src: url(NotoSans-Light.eot?#iefix) format('embedded-opentype'),
+    url(NotoSans-Light.woff) format('woff'),
+    url(NotoSans-Light.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans DemiLight';
+    font-style: normal;
+    font-weight: 350;    
+    src: url(NotoSans-DemiLight.eot);
+    src: url(NotoSans-DemiLight.eot?#iefix) format('embedded-opentype'),
+    url(NotoSans-DemiLight.woff) format('woff'),
+    url(NotoSans-DemiLight.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;    
+    src: url(NotoSans-Regular.eot);
+    src: url(NotoSans-Regular.eot?#iefix) format('embedded-opentype'),
+    url(NotoSans-Regular.woff) format('woff'),
+    url(NotoSans-Regular.otf) format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Noto Sans Medium';
+    font-style: normal;
+    font-weight: 500;    
+    src: url(NotoSans-Medium.eot);
+    src: url(NotoSans-Medium.eot?#iefix) format('embedded-opentype'),
+    url(NotoSans-Medium.woff) format('woff'),
+    url(NotoSans-Medium.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Bold';
+    font-style: normal;
+    font-weight: 700;    
+    src: url(NotoSans-Bold.eot);
+    src: url(NotoSans-Bold.eot?#iefix) format('embedded-opentype'),
+    url(NotoSans-Bold.woff) format('woff'),
+    url(NotoSans-Bold.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Black';
+    font-style: normal;
+    font-weight: 900;    
+    src: url(NotoSans-Black.eot);
+    src: url(NotoSans-Black.eot?#iefix) format('embedded-opentype'),
+    url(NotoSans-Black.woff) format('woff'),
+    url(NotoSans-Black.otf) format('truetype');
+}
+
+.fw100 {font-family: 'Noto Sans Thin';  font-weight: 100;}
+.fw300 {font-family: 'Noto Sans Light';  font-weight: 300;}
+.fw350 {font-family: 'Noto Sans DemiLight';  font-weight: 350;}
+.fw400 {font-family: 'Noto Sans';  font-weight: 400;}
+.fw500 {font-family: 'Noto Sans Medium';  font-weight: 500;}
+.fw700 {font-family: 'Noto Sans Bold';  font-weight: 700;}
+.fw900 {font-family: 'Noto Sans Black';  font-weight: 900;}
