@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="euc-kr">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>법인폰 개인인증 관리</title>
+<link rel="stylesheet" type="text/css" href="css/mobile/business.css">
+<script src="css/mobile/js/jquery-1.12.0.min.js"></script>
+<script src="css/mobile/js/business.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+	<!-- header -->
+    <!-- 180912 수정 -->
+    <header>
+        <h1 class="logo"><span class="sp">T world 법인폰</span></h1>
+        <button type="button" id="nav_open" class="btn_ico ico_nav">메뉴</button>
+        <a href="#" role="button" class="home"><span class="sp">홈</span></a>
+        <div class="sub">
+            <h2>법인폰 개인인증 관리</h2>
+            <button type="button" class="btn_ico ico_prev">이전</button>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <div id="container">
+        <!-- nav 180912 추가 -->
+        <div class="aside">
+            nav 공통
+            <button type="button" id="nav_close" class="btn_x"><span class="blind">메뉴닫기</span></button>
+        </div>
+        <!-- //nav -->
+
+        <div id="content" class="manage">
+            <!-- tab -->
+            <ul class="tab">
+            <li class="active"><a href="#">실사용자<br>승인</a></li>
+            <li><a href="#">실사용자<br>관리</a></li>
+            <li><a href="#">전체법인<br>상태관리</a></li>
+            </ul>
+            <!-- //tab -->
+            <h3 class="blind">실사용자 승인</h3><!-- 180912 수정 -->
+            <dl class="user_toal">
+                <dt>실사용자 승인 요청 회선수</dt>
+                <dd>총 <strong>107</strong>개</dd>
+            </dl>
+
+            <!-- nolist -->
+            <p class="noti_nolist">승인요청 내역이 없습니다.</p>
+            <!-- //nolist -->
+
+            <!-- lst -->
+            <ul class="lst_user">
+            <li>
+                <span class="date">2018.07.05 17:15</span>
+                <!-- 접근성 수정 -->
+                <!-- 180910 수정 -->
+                <a href="#" class="name" role="button" aria-expanded="false">실사용자 <strong>홍길동</strong></a>
+                <p class="number">010-2020-7777</p>
+                <!-- 180814 수정 -->
+                <!-- 상세정보 -->
+                <dl class="user_info">
+                    <dt>서비스 상태</dt>
+                    <dd>사용중</dd>
+                    <dt>가입일</dt>
+                    <dd>2008.09.04</dd>
+                    <dt>생년월일</dt>
+                    <dd>* * * *.04.28</dd>
+                </dl>
+                <!-- //상세정보 -->
+                <ul class="btn_group">
+                <li><button type="button" class="btn_s btn_blue_bright">반려</button> </li>
+                <li><button type="button" class="btn_s btn_blue">승인</button></li>
+                </ul>
+            </li>
+            <li>
+                <span class="date">2018.07.05 17:15</span>
+                <!-- 접근성 수정 -->
+                <!-- 180910 수정 -->
+                <a href="#" class="name" role="button" aria-expanded="false">실사용자 <strong>김아무개</strong></a>
+                <p class="number">010-2020-7777</p>
+                <!-- 180814 수정 -->
+                <!-- 상세정보 -->
+                <dl class="user_info">
+                    <dt>서비스 상태</dt>
+                    <dd>사용중</dd>
+                    <dt>가입일</dt>
+                    <dd>2008.09.04</dd>
+                    <dt>생년월일</dt>
+                    <dd>* * * *.04.28</dd>
+                </dl>
+                <!-- //상세정보 -->
+                <ul class="btn_group">
+                <li><button type="button" class="btn_s btn_blue_bright">반려</button></li>
+                <li><button type="button" class="btn_s btn_blue">승인</button></li>
+                </ul>
+            </li>
+            </ul>
+            <!-- //lst -->
+            
+            <!-- btn -->
+            <button type="button" class="btn_more">더보기 (1/10)</button>
+            <!-- //btn -->
+
+            <!-- checkpoint -->
+            <div class="checkpoint">
+                <h3 class="hx_cp">Check Point</h3><!-- 180912 수정 -->
+                <ul class="lst_check">
+                <li>
+                    <!-- 접근성 수정 -->
+                    <a href="#" class="q" aria-expanded="false">1. 승인요청 안내</a>
+                    <div class="a">
+                        <ul>
+                        <li class="dash">매일 오전 10시 기준 실사용자 승인 요청 현황에 따른 안내 SMS가 해당되는 법인위임대리인에게 발송됩니다.</li>
+                        <li class="dash">별도의 위임대리인 미설정 관리 회선이 실사용자 승인 신청 시, 모든 위임대리인에게 SMS가 발송됩니다.</li>
+                        <li class="dash">별도의 위임대리인이 미설정된 관리 회선 실사용자 승인 시, 승인처리된 위임대리인의 관리회선으로 포함됩니다.</li>
+                        </ul>
+                    </div>
+                </li>
+                </ul>
+            </div>
+            <!-- //checkpoint -->
+        </div>
+    </div>
+    <!-- //container -->
+
+    <!-- footer -->
+    <footer>
+		footer
+    </footer>
+    <!-- //footer -->
+</div>
+</body>
+</html>

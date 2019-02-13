@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="euc-kr">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>법인폰개인인증신청</title>
+<link rel="stylesheet" type="text/css" href="css/mobile/business.css">
+<script src="css/mobile/js/jquery-1.12.0.min.js"></script>
+<script src="css/mobile/js/business.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+	<!-- header -->
+    <!-- 180912 수정 -->
+    <header>
+        <h1 class="logo"><span class="sp">T world 법인폰</span></h1>
+        <button type="button" id="nav_open" class="btn_ico ico_nav">메뉴</button>
+        <a href="#" role="button" class="home"><span class="sp">홈</span></a>
+        <div class="sub">
+            <h2>법인폰 개인인증 관리</h2>
+            <button type="button" class="btn_ico ico_prev">이전</button>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <!-- container -->
+    <div id="container">
+        <!-- nav 180912 추가 -->
+        <div class="aside">
+            nav 공통
+            <button type="button" id="nav_close" class="btn_x"><span class="blind">메뉴닫기</span></button>
+        </div>
+        <!-- //nav -->
+
+        <div id="content" class="request">
+            <!-- step -->
+            <div class="step_wrap">
+                <ul class="step">
+                <li class="pass"><span>Step1 완료</span></li>
+                <li class="on"><span>Step2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                </ul>
+                <div class="line"></div>
+            </div>
+            <!-- //step -->
+
+            <div class="inp_group lst_data">
+                <form action="">
+                <fieldset>
+                    <legend class="blind">실사용자 본인인증 정보</legend>
+                    <div class="inp_area">
+                        <label for="name">실사용자 이름</label>
+                        <input type="text" id="name" class="inp">
+                    </div>
+                    <div class="inp_area col2">
+                        <label for="idnum">실사용자 주민등록 번호</label>
+                        <ul>
+                        <!-- 0727 수정 -->
+                        <li><span><input type="number" id="idnum" maxlength="6" class="inp" title="주민번호 앞자리"></span></li>
+                        <!-- //0727 수정 -->
+                        <li><span><input type="password" id="idnum2" maxlength="7" class="inp" title="주민번호 뒷자리"></span></li>
+                        </ul>
+
+                        <!-- 팝업 호출 버튼 -->
+                        <!-- 접근성 수정 -->
+                        <button type="button" class="btn btn_bright" data-remodal-target="notskt">실명확인</button>
+                    </div>
+
+                    <button type="submit" class="btn btn_dark mt10">다음</button>
+                </fieldset>
+                </form>
+            </div>
+
+            <!-- checkpoint -->
+            <div class="checkpoint">
+                <h3 class="hx_cp">Check Point</h3><!-- 180912 수정 -->
+                <ul class="lst_check">
+                <li>
+                    <!-- 접근성 수정 -->
+                    <a href="#" class="q" aria-expanded="false">1. 내국인</a>
+                    <div class="a">
+                        <!-- 0803 수정 -->
+                        <p class="dash">법인 폰 개인인증 서비스를 이용 할 실 사용자 실명확인을 해주세요.</p>
+                    </div>
+                </li>
+                <li>
+                    <!-- 접근성 수정 -->
+                    <a href="#" class="q" aria-expanded="false">2. 외국인</a>
+                    <div class="a">
+                        <p class="dash">외국인은 가까운 SK텔레콤 지점/대리점을 직접 방문하셔서 신청해 주세요. (구비서류 : 외국인 등록증)</p>
+                        <a href="#" class="btn btn_dark mt10">지점/대리점 검색하기</a>
+                    </div>
+                </li>
+                </ul>
+            </div>
+            <!-- //checkpoint -->
+        </div>
+    </div>
+    <!-- //container -->
+
+    <!-- modal -->
+    <div class="remodal" data-remodal-id="notskt" role="alertdialog" aria-modal="ture">
+        <h3>고객 정보 등록 안내</h3>
+        <div class="cont">
+            <strong class="b">
+                SK텔레콤은 법인폰 개인인증 서비스 가입 업무 처리를 위해 본인인증 시, 개인정보 (이름, 주민등록번호, 연락처, 주소)를 등록/보관합니다.
+            </strong>
+            <p class="s">
+                단, 본인 인증 후, 법인폰 개인인증 서비스 신청을 중단 할 경우 등록/보관 중인 개인 정보는 익일 00시에 자동으로 삭제합니다.
+            </p>
+            <p class="chk"><input type="checkbox" id="agree"><label for="agree">고객정보 등록 안내 내용을 확인하였으며, 동의합니다.</label></p>
+            <ul class="btn_group">
+            <li>
+                <button type="button" class="btn btn_bright" data-remodal-action="cancel">취소</button>
+            </li>
+            <li>
+                <button type="button" class="btn btn_dark" data-remodal-action="confirm">확인</button>
+            </li>
+            </ul>
+        </div>
+        <button class="btn_x_white" data-remodal-action="close"><span class="blind">닫기</span></button>
+    </div>
+    <!-- //modal -->
+
+    <!-- footer -->
+    <footer>
+		footer
+    </footer>
+    <!-- //footer -->
+</div>
+
+<script>
+    $(function() { steps(); });
+</script>
+<script src="css/mobile/js/remodal.js"></script>
+</body>
+</html>
