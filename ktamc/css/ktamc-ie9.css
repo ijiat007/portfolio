@@ -1,0 +1,13 @@
+.sel,select{vertical-align:top}
+.sel{overflow:hidden;width:130px}
+.sel select{width:150px}
+
+.graphic li .co{padding-top:27px}
+.graphic li .co.c{padding-top:12px}
+
+.structure .tit{top:188px;left:8px}
+.structure li p{box-sizing:border-box;padding-top:38px}
+.structure li p:before{margin-top:-15px}
+
+.right_info li:before, .right_info li em {float:left}
+.right_info li:after{display:block;clear:both;content:''}

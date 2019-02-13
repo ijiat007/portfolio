@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>KT AMC</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="css/ktamc.css">
+<!--[if IE 9]>
+<link rel="stylesheet" href="css/ktamc-ie9.css">
+<![endif]-->
+<script type="text/javascript" src="js/libs/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</head>
+
+<body id="main">
+    <header>
+        <div class="inr">
+            <a href="#" class="logo"><span>KT AMC</span></a>
+            <button type="button" id="navOpen" class="menu"><span>메뉴</span></button>
+            <nav>
+                <ul class="gnb">
+                <!-- 선택 페이지 active 클래스 추가 -->
+                <li><a href="#"><span>회사소개</span></a>
+                    <ul class="snb">
+                    <li><a href="#"><span>회사정보</span></a></li>
+                    <li><a href="#"><span>연혁</span></a></li>
+                    <li><a href="#"><span>오시는 길</span></a></li>
+                    </ul> 
+                </li>
+                <li><a href="#"><span>운용현황</span></a></li>
+                <li><a href="#"><span>인재채용</span></a></li>
+                <li><a href="#"><span>공지사항</span></a>
+                    <ul class="snb">
+                    <li><a href="#"><span>회사소식</span></a></li>
+                    <li><a href="#"><span>공지사항</span></a></li>
+                    </ul>
+                </li>
+                </ul>
+                <button type="button" id="navClose" class="btn_x"><span>메뉴닫기</span></button>
+            </nav>
+            <!-- <h2>회사소식<span>notice</span></h2> -->
+        </div>
+    </header>
+    
+    <div id="container" class="wide">
+        <div class="visual">
+            <!-- video -->
+            <div class="main_video">
+                <div class="player" role="application" aria-label="media player">
+                    <div id="play_1" class="jplayer"></div>
+                    <div id="play_2" class="jplayer"></div>
+                </div>
+                <ul id="videoNav" class="video_nav">
+                <li><a href="#"><span>01</span></a></li>
+                <li><a href="#"><span>02</span></a></li>
+                </ul>
+            </div>
+            <!-- //video -->
+
+            <p class="main_copy">
+                차별화 된 부동산 자산운용 서비스로<br>리츠시장을 선도하는<br>
+                <span class="logo">KT AMC</span>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/libs/jquery.jplayer.min.js"></script>
+    <script type="text/javascript">
+		(function($){
+			//영상
+			function initJPlayerFunc(i,s){
+				$("#play_"+i).jPlayer({
+					ready: function () {
+						$(this).jPlayer("setMedia", {
+                            m4v: "movie/movie"+i+".mp4"
+						});
+						if(s){
+							$(this).jPlayer("play");
+						}
+					},
+					ended: function() { 
+						if(i == 2) {
+							i = 0;
+						}
+						VideoNav.act(i);
+					},
+					swfPath: "js/libs/",
+                    supplied: "m4v",
+                    size: {
+                        width: "100%",
+                        height: "100%"
+                    }
+				});
+                $("#play_1").jPlayer("mute"); //크롬자동재생 되기위해 추가
+			};
+			function stopJPlayerFunc(){
+				$("#play_1").jPlayer("stop");
+				$("#play_2").jPlayer("stop");
+			}
+			initJPlayerFunc(1, true);
+            initJPlayerFunc(2);
+            
+			//영상 내비
+			var VideoNav = (function(){
+				var init, act;
+				var _actBt, _timer;
+				var $el, $elLi, $elA;
+				var oldIdx;
+
+				init = function(){
+					$el = $("#videoNav");
+					$elLi = $el.find("li");
+					$elA = $el.find("a");
+
+					$elA.on({
+						"click": function(e) {
+                            e.preventDefault();
+							var idx = $(this).parent().index();
+							if(idx == oldIdx) return;
+                            act(idx);
+						}
+					});
+				};
+				
+				act = function(idx){
+					oldIdx = idx;
+					_actBt(idx);
+
+					var $player = $(".main_video .jplayer");
+					stopJPlayerFunc();
+					$("#play_" + (idx+1)).jPlayer("play");
+					$player.css("display","none");
+					$player.eq(idx).fadeIn(1000);
+				};
+
+				_actBt = function(idx){
+					$elLi.removeClass("on");
+					$elLi.eq(idx).addClass("on");
+				};
+
+				return{
+					init: init,
+					act: act
+				}
+			})();
+
+			$(function(){				
+				VideoNav.init();
+                VideoNav.act(0);
+			});
+		})(jQuery);
+	</script>
+    
+    <footer>
+        <div class="inr">
+            <p class="copyright">Copyright ⓒ 2019 kt AMC. ALL RIGHTS RESERVED.</p>
+            <div class="link_group">
+                <span>유관기관</span>
+                <ul class="alike">
+                <li><a href="#" target="_blank">국토교통부</a></li>
+                <li><a href="#" target="_blank">한국리츠협회</a></li>
+                </ul>
+
+                <article class="family_site">
+                    <button type="button" class="btn_fs">Family Site</button>
+                    <div class="family">
+                        <div class="family_group">
+                            <em>ICT/부동산</em>
+                            <ul>
+                            <li><a href="http://www.kt.com" target="_blank" class="hover">kt</a></li>
+                            <li><a href="http://www.ktestate.com">kt estate</a></li>
+                            <li><a href="http://www.telecop.co.kr" target="_blank">kt telecop</a></li>
+                            <li><a href="http://www.ktsat.net" target="_blank">kt sat</a></li>
+                            <li><a href="http://www.ktengcore.com" target="_blank">kt engcore</a></li>
+                            <li><a href="http://www.ktis.co.kr" target="_blank">kt is</a></li>
+                            <li><a href="http://www.ktcs.co.kr" target="_blank">kt cs</a></li>
+                            <li><a href="http://www.ktmns.com" target="_blank">kt m&s</a></li>
+                            <li><a href="http://www.ktp.co.kr" target="_blank">kt powertel</a></li>
+                            </ul>
+                            <ul>
+                            <li><a href="http://www.ktlinkus.com" target="_blank">kt linkus</a></li>
+                            <li><a href="http://www.ktsubmarine.co.kr" target="_blank">kt submarine</a></li>
+                            <li><a href="http://www.ktds.com" target="_blank">kt ds</a></li>
+                            <li><a href="http://www.ktnexr.com" target="_blank">kt NexR</a></li>
+                            <li><a href="http://www.initech.com" target="_blank">INITECH</a></li>
+                            <li><a href="http://www.ktservice.co.kr" target="_blank">kt service 북부</a></li>
+                            <li><a href="http://www.ktservice.net" target="_blank">kt service 남부</a></li>
+                            <li><a href="http://www.ktmmobile.com" target="_blank">kt M mobile</a></li>
+                            <li><a href="http://www.ktcommerce.co.kr" target="_blank">kt commerce</a></li>
+                            </ul>
+                        </div>
+                        <div class="family_group">
+                            <em>미디어/콘텐츠</em>
+                            <ul>
+                            <li><a href="http://www.ktskylife.co.kr" target="_blank">kt skylife</a></li>
+                            <li><a href="http://www.kthcorp.com" target="_blank">kth</a></li>
+                            <li><a href="http://www.geniemusic.co.kr" target="_blank">지니뮤직</a></li>
+                            <li><a href="http://tv.skylife.co.kr" target="_blank">sky TV</a></li>
+                            <li><a href="http://www.nasmedia.co.kr" target="_blank">nasmedia</a></li>
+                            <li><a href="http://www.mhows.com" target="_blank">kt mhows</a></li>
+                            <li><a href="http://www.playd.com" target="_blank">㈜플레이디</a></li>
+                            </ul>
+                        </div>
+                        <div class="family_group">
+                            <em>금융</em>
+                            <ul>
+                            <li><a href="http://www.bccard.com" target="_blank">BC Card</a></li>
+                            <li><a href="http://www.smartro.co.kr" target="_blank">Smartro</a></li>
+                            <li><a href="http://www.hncnet.co.kr" target="_blank">H&C Network</a></li>
+                            <li><a href="http://service.vp.co.kr" target="_blank">브이피㈜</a></li>
+                            <li><a href="http://www.ktinvestment.co.kr" target="_blank">kt investment</a></li>
+                            </ul>
+                        </div>
+                        <div class="family_group">
+                            <em>기타</em>
+                            <ul>
+                            <li><a href="http://kt-sports.co.kr" target="_blank">kt sports</a></li>
+                            <li><a href="http://www.whox2.com" target="_blank">Whowho</a></li>
+                            <li><a href="http://www.kt-sb.com" target="_blank">kt-SB data service</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn_x_red">닫기</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

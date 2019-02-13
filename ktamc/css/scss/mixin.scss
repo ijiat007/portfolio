@@ -1,0 +1,87 @@
+@mixin breakpoint($point) {
+    @if $point == m {
+        @media (max-width: $breakpoint) { 
+            @content;
+        }
+    }
+    // @else if $point == laptop {
+    //     @media (min-width: 64em) { @content ; }
+    // }
+}
+@mixin plr($value) {
+    padding-left: $value + px;
+    padding-right: $value  + px;
+}
+@mixin ptb($value) {
+    padding-top: $value + px;
+    padding-bottom: $value  + px;
+}
+@mixin hlh($value) {
+    height: $value + px;
+    line-height: $value + px;
+}
+@mixin circle($size) {
+    width: $size;
+    height: $size;
+    border-radius: 100%;
+}
+@mixin transform($value) {
+    transform: rotate($value);
+}
+@mixin ellipse($max-width) {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: $max-width;
+    white-space: nowrap;
+}
+@mixin ellipse-multi($max-width, $line) {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: $max-width;
+    white-space: normal;
+    word-wrap: break-word; 
+    display: -webkit-box; 
+    -webkit-line-clamp: $line; 
+    -webkit-box-orient: vertical;
+    max-height: 1.4 * $line + em;
+}
+@mixin round($value) {
+    border-radius: $value;
+}
+@mixin clear($el) {
+    &:#{$el} {
+        display: block;
+        clear: both;
+        content: '';
+    }
+}
+@mixin sp {
+    overflow: hidden;
+    display: inline-block;
+    line-height: 99em;
+    vertical-align: top;
+}
+@mixin vcenter {
+    display: flex;
+    align-items: center;
+}
+
+// @mixin bgimg($w: auto, $h: auto, $bp-l: 0, $bp-t: 0) {
+//     overflow: hidden;
+//     display: inline-block;
+//     width: $w;
+//     height: $h;
+//     background-position: $bp-l $bp-t;
+//     background-size: 100%;
+//     background-repeat: no-repeat;
+//     line-height: 99em;
+//     vertical-align: top;
+// }
+
+
+
+
+
+
